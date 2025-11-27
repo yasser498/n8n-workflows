@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <title>مكتبة مسارات n8n - المدرسة</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">📡 مكتبة مسارات n8n</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <span class="nav-link active">لوحة الاستعراض</span>
+        </li>
+      </ul>
+      <span class="navbar-text small">
+        إدارة التحول الرقمي المدرسي
+      </span>
+    </div>
+  </div>
+</nav>
+
+<main class="py-4">
+  <div class="container">
+    <!-- Filters Row -->
+    <div class="card mb-4 shadow-sm border-0">
+      <div class="card-body">
+        <div class="row gy-3 align-items-end">
+          <div class="col-md-4">
+            <label class="form-label fw-semibold">بحث عام</label>
+            <input id="searchInput" type="text" class="form-control" placeholder="ابحث بالعنوان أو الوصف أو الوسوم..." />
+          </div>
+          <div class="col-md-3">
+            <label class="form-label fw-semibold">الفئة</label>
+            <select id="categoryFilter" class="form-select">
+              <option value="">كل الفئات</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label fw-semibold">مستوى التعقيد</label>
+            <select id="complexityFilter" class="form-select">
+              <option value="">كل المستويات</option>
+              <option value="Low">منخفض</option>
+              <option value="Medium">متوسط</option>
+              <option value="High">مرتفع</option>
+            </select>
+          </div>
+          <div class="col-md-2 d-grid">
+            <button id="resetBtn" class="btn btn-outline-secondary">إعادة تعيين</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="row g-3 mb-3" id="statsRow">
+      <div class="col-md-4">
+        <div class="stat-card">
+          <div class="stat-label">إجمالي المسارات</div>
+          <div id="totalWorkflows" class="stat-value">0</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-card">
+          <div class="stat-label">فئات تعليمية</div>
+          <div id="totalCategories" class="stat-value">0</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-card">
+          <div class="stat-label">Triggers متنوعة</div>
+          <div id="totalTriggers" class="stat-value">0</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Info -->
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="mb-0 fw-bold">المسارات المتاحة</h5>
+      <span class="small text-muted" id="resultCount">0 مسار</span>
+    </div>
+
+    <!-- Workflows List -->
+    <div id="workflowsContainer" class="row g-3">
+      <!-- Cards injected by script.js -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="text-center text-muted py-5 d-none">
+      <h5 class="mb-2">لا توجد مسارات مطابقة لخيارات البحث الحالية</h5>
+      <p class="mb-3">جرّب تقليل شروط البحث أو اختيار فئة أخرى.</p>
+      <button class="btn btn-outline-primary" id="emptyResetBtn">إظهار كل المسارات</button>
+    </div>
+
+    <hr class="my-4" />
+    <footer class="text-center text-muted small mb-2">
+      تم الإعداد بواسطة فريق التحول الرقمي المدرسي · مستضاف مجانًا عبر GitHub Pages
+    </footer>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

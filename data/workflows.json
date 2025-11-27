@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "إشعار غياب الطالب عبر واتس آب",
+    "complexity": "Medium",
+    "trigger": "Webhook من نموذج الغياب",
+    "category": "Students & Parents",
+    "description": "عند تسجيل غياب طالب في نموذج Google Forms أو من نظام داخلي، يتم إرسال رسالة واتس آب تلقائياً لولي الأمر مع بيانات اليوم والسبب والرابط للتواصل.",
+    "tags": [
+      "whatsapp",
+      "students",
+      "parents",
+      "attendance"
+    ],
+    "link": ""
+  },
+  {
+    "id": 2,
+    "title": "أرشفة ملفات المعلمين في Google Drive",
+    "complexity": "Low",
+    "trigger": "Scheduled (كل ليلة)",
+    "category": "Teachers & HR",
+    "description": "مسار يقوم بقراءة ملفات مرفوعة في مجلد مشترك، ثم ينقل كل ملف إلى مجلد المعلم المناسب حسب اسمه أو بريده الإلكتروني، مع تحديث Sheet أرشيف.",
+    "tags": [
+      "google drive",
+      "teachers",
+      "archive"
+    ],
+    "link": ""
+  },
+  {
+    "id": 3,
+    "title": "تقرير أسبوعي لسلوك الطلاب على البريد الإلكتروني",
+    "complexity": "High",
+    "trigger": "Scheduled (أسبوعي)",
+    "category": "Students & Behavior",
+    "description": "تجميع المخالفات السلوكية والنقاط الإيجابية للطلاب من Google Sheets أو قاعدة بيانات، وإنشاء تقرير PDF وإرساله للإدارة والمرشد الطلابي.",
+    "tags": [
+      "behavior",
+      "email",
+      "pdf"
+    ],
+    "link": ""
+  },
+  {
+    "id": 4,
+    "title": "تنبيه إداري عند امتلاء مساحة Google Drive",
+    "complexity": "Low",
+    "trigger": "Scheduled (يومي)",
+    "category": "IT & Operations",
+    "description": "التحقق بشكل دوري من استهلاك المساحة في Google Drive، وإذا تجاوزت نسبة معينة يتم إرسال تنبيه بريد إلكتروني لمسؤول التقنية.",
+    "tags": [
+      "google drive",
+      "monitoring"
+    ],
+    "link": ""
+  },
+  {
+    "id": 5,
+    "title": "تسجيل طلبات الصيانة عبر Telegram",
+    "complexity": "Medium",
+    "trigger": "Telegram Bot",
+    "category": "IT & Operations",
+    "description": "عند إرسال رسالة إلى بوت تيليجرام خاص بالصيانة، يتم إنشاء سجل في Google Sheets مع نوع العطل، الموقع، وصاحب البلاغ، وإرسال رقم متابعة له.",
+    "tags": [
+      "telegram",
+      "maintenance",
+      "google sheets"
+    ],
+    "link": ""
+  }
+]
